@@ -1,96 +1,374 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>フルカレ 公式案内</title>
-  <meta name="description" content="フルカレの利用規約、プライバシーポリシー、アカウント削除案内">
-  <style>
-:root {
-  --bg: #0b1020;
-  --card: #121933;
-  --card2: #0f1530;
-  --text: #edf2ff;
-  --muted: #b8c3e0;
-  --line: #243057;
-  --accent: #70a5ff;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>フルカレ｜話すだけで予定が入る無料カレンダーアプリ（共有・家計簿・生理予測）</title>
+<meta name="description" content="フルカレは「明日15時から歯医者」と話すだけで予定が入る無料のカレンダーアプリ。家族・夫婦で使える共有カレンダー、家計簿、生理日の予測、育児記録、日記、ウィジェットまでこれ一つ。iPhone・Androidに対応。">
+<link rel="canonical" href="https://shabekare.github.io/shabekare-public/">
+<link rel="alternate" hreflang="ja" href="https://shabekare.github.io/shabekare-public/">
+<link rel="alternate" hreflang="en" href="https://shabekare.github.io/shabekare-public/en/">
+<link rel="alternate" hreflang="x-default" href="https://shabekare.github.io/shabekare-public/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="フルカレ">
+<meta property="og:title" content="フルカレ｜話すだけで予定が入るカレンダーアプリ">
+<meta property="og:description" content="予定入力、めんどくさい？ 話すだけで予定が入る。共有カレンダー・家計簿・生理予測・育児記録もこれ一つ。">
+<meta property="og:url" content="https://shabekare.github.io/shabekare-public/">
+<meta property="og:image" content="https://shabekare.github.io/shabekare-public/img/ogp-ja.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@shabekare">
+<meta name="apple-itunes-app" content="app-id=6760893351">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "フルカレ",
+  "alternateName": ["Fullcale", "フルカレ - 話すだけで予定が入るカレンダー"],
+  "description": "話すだけで予定が入るカレンダーアプリ。共有カレンダー、家計簿、生理日の予測、育児記録、日記、タスク・メモ、ウィジェットに対応。",
+  "operatingSystem": "iOS, Android",
+  "applicationCategory": "ProductivityApplication",
+  "inLanguage": ["ja", "en"],
+  "url": "https://shabekare.github.io/shabekare-public/",
+  "image": "https://shabekare.github.io/shabekare-public/img/ogp-ja.png",
+  "downloadUrl": ["https://apps.apple.com/jp/app/id6760893351", "https://play.google.com/store/apps/details?id=com.koki.shabekare"],
+  "offers": [
+    {"@type": "Offer", "name": "無料プラン", "price": "0", "priceCurrency": "JPY"},
+    {"@type": "Offer", "name": "Pro（月額）", "price": "300", "priceCurrency": "JPY"}
+  ]
 }
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; background: linear-gradient(180deg, #0a1020, #0b1228 42%, #0d1630); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', sans-serif; line-height: 1.75; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.wrap { max-width: 920px; margin: 0 auto; padding: 24px 18px 72px; }
-.hero { padding: 28px 24px; border: 1px solid var(--line); background: rgba(18,25,51,.88); border-radius: 22px; box-shadow: 0 10px 40px rgba(0,0,0,.28); }
-.nav { display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
-.nav a, .button { display:inline-block; padding: 10px 14px; border:1px solid var(--line); background: rgba(112,165,255,.08); border-radius: 999px; color: var(--text); }
-.card { margin-top: 20px; padding: 24px; border: 1px solid var(--line); background: rgba(18,25,51,.85); border-radius: 20px; }
-h1 { font-size: 1.9rem; line-height:1.3; margin:0 0 10px; }
-h2 { font-size: 1.25rem; margin: 30px 0 10px; padding-top: 8px; border-top:1px solid rgba(255,255,255,.06); }
-h3 { font-size: 1.05rem; margin: 20px 0 8px; color: #d9e4ff; }
-p, li { color: var(--muted); }
-ul, ol { padding-left: 1.35rem; }
-.meta { color: var(--muted); font-size:.95rem; }
-.notice { margin-top: 16px; padding: 14px 16px; border-radius: 14px; background: rgba(112,165,255,.10); border: 1px solid rgba(112,165,255,.24); color: var(--text); }
-.footer { margin-top: 26px; color: var(--muted); font-size:.92rem; }
-.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; margin-top:18px; }
-.tile { padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: rgba(15,21,48,.92); }
-.tile h3 { margin-top:0; }
-.small { font-size:.95rem; color: var(--muted); }
-.codebox { white-space: pre-wrap; background: rgba(255,255,255,.04); border:1px solid var(--line); padding:14px; border-radius:14px; }
-</style>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "フルカレは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。音声入力、共有カレンダー、家計簿、生理の記録と予測、育児記録、日記、ウィジェットなど主な機能は無料で使えます（広告あり）。月額300円のProにすると広告が消え、AI秘書が使い放題になります。"}},
+    {"@type": "Question", "name": "音声入力ではどんな言い方ができますか？", "acceptedAnswer": {"@type": "Answer", "text": "「明日15時から歯医者」「来週月曜 会議」「10月10日から12日 旅行」など、ふだんの言い方で話せます。時間を言わなければ終日の予定になります。「〜をタスクに追加」「〜をメモして」と言えば、タスクやメモとして登録されます。"}},
+    {"@type": "Question", "name": "家族や夫婦でカレンダーを共有できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。共有カレンダーを作って招待コードを送るだけで、家族やパートナーと予定を共有できます。予定が追加されるとメンバーに通知が届き、日付ごとに写真も共有できます。"}},
+    {"@type": "Question", "name": "家計簿は家族に見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "見られません。家計簿は自分専用で、共有カレンダーのメンバーには表示されません。"}},
+    {"@type": "Question", "name": "生理日の予測は正確ですか？", "acceptedAnswer": {"@type": "Answer", "text": "記録した生理日から次回の予定日とPMS期間の目安を表示します。あくまで目安なので、医療上の判断には使わないでください。"}},
+    {"@type": "Question", "name": "iPhoneとAndroidのどちらでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "どちらにも対応しています。共有カレンダーはiPhoneとAndroidの間でも使えます。"}}
+  ]
+}
+</script>
 </head>
 <body>
-  <main class="wrap">
-    
-<section class="hero">
-  <h1>フルカレ 公式案内</h1>
-  <p class="meta">フルカレの利用規約、プライバシーポリシー、アカウント削除案内をまとめた公開ページです。</p>
-  <div class="nav">
-    <a href="terms.html">利用規約</a>
-    <a href="privacy.html">プライバシーポリシー</a>
-    <a href="account-deletion.html">アカウント削除</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScaxRCHm7md-bDhODfngOzFkWBwTSequt_0IRT_gFWCEmr4aQ/viewform?usp=publish-editor">不具合報告 / 要望フォーム</a>
-  </div>
-</section>
-<section class="grid">
-  <article class="tile">
-    <h3>利用規約</h3>
-    <p>予定管理、共有カレンダー、日記、写真、スタンプ、音声入力、AI解析、広告、サブスクリプションなど、サービス利用条件を掲載しています。</p>
-    <a class="button" href="terms.html">開く</a>
-  </article>
-  <article class="tile">
-    <h3>プライバシーポリシー</h3>
-    <p>取得情報、利用目的、共有機能、日記・写真保存、音声入力、AI解析、通知、広告、課金関連情報などを掲載しています。</p>
-    <a class="button" href="privacy.html">開く</a>
-  </article>
-  <article class="tile">
-    <h3>アカウント削除</h3>
-    <p>削除申請方法、削除時の注意点、共有データやサブスクリプションに関する補足を掲載しています。</p>
-    <a class="button" href="account-deletion.html">開く</a>
-  </article>
-</section>
-<section class="card">
-  <h2>主な機能</h2>
-  <div class="grid">
-    <div class="tile"><h3>カレンダー</h3><p>月表示、予定追加・編集・削除、終日予定、繰り返し予定、カラー設定、祝日表示、通知に対応。</p></div>
-    <div class="tile"><h3>共有</h3><p>共有カレンダー作成、招待コード参加、メンバー管理、共有予定通知、写真共有に対応。</p></div>
-    <div class="tile"><h3>記録</h3><p>タスク、メモ、日記、写真添付、スタンプ、カスタムスタンプテンプレートに対応。</p></div>
-    <div class="tile"><h3>音声入力</h3><p>予定・タスク・メモの音声入力に対応し、ルールベース解析とAI解析を組み合わせて処理する場合があります。</p></div>
-  </div>
-</section>
-<section class="card">
-  <h2>サポート・お問い合わせ</h2>
-  <p>ご不明な点、不具合報告、ご要望はお気軽にご連絡ください。</p>
-  <div class="notice">
-    メール：<a href="mailto:hangxitengben@gmail.com">hangxitengben@gmail.com</a>
-  </div>
-  <p style="margin-top:14px;">または下のフォームからお送りください。</p>
-  <div class="nav">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScaxRCHm7md-bDhODfngOzFkWBwTSequt_0IRT_gFWCEmr4aQ/viewform?usp=publish-editor">お問い合わせ・不具合報告フォーム</a>
-  </div>
-</section>
-<p class="footer">本ページの内容は、法令改正やサービス内容の変更に応じて更新される場合があります。最終更新日：2026年5月21日</p>
 
-  </main>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon-192.png" alt="" width="32" height="32">フルカレ</a>
+    <nav class="header-nav">
+      <a href="#features">機能</a>
+      <a href="#price">料金</a>
+      <a href="#faq">よくある質問</a>
+      <a class="lang" href="en/">EN</a>
+      <a class="cta-mini" href="#download">無料で使う</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="hero-kicker">無料カレンダーアプリ「フルカレ」</p>
+      <h1>予定入力、<br><span class="band">めんどくさい？</span></h1>
+      <div class="pill">話すだけで、予定が入る。</div>
+      <p class="hero-lead">「明日15時から歯医者」と話すだけで、カレンダーに予定が入ります。家族との共有カレンダー、家計簿、生理日の予測、育児記録まで、毎日の記録がこれ一つにまとまります。</p>
+      <div class="stores" id="download">
+        <a class="store-btn" href="https://apps.apple.com/jp/app/id6760893351" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3-.79-1.55.02-2.97.9-3.77 2.28-1.6 2.78-.41 6.9 1.15 9.16.77 1.1 1.68 2.34 2.87 2.3 1.15-.05 1.59-.75 2.98-.75 1.39 0 1.78.75 3 .72 1.24-.02 2.02-1.12 2.78-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.64-.77 1.07-1.84.95-2.91-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.82 1.03.08 2.07-.52 2.71-1.29z"/></svg>
+          <span><small>iPhone</small>App Storeで入手</span>
+        </a>
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.koki.shabekare" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00c26e" d="M3.6 2.3 13.4 12l-9.8 9.7c-.35-.2-.6-.6-.6-1.1V3.4c0-.5.25-.9.6-1.1z"/><path fill="#2f9bff" d="M3.6 2.3c.35-.2.8-.2 1.2 0l11.9 6.8-3.3 2.9z"/><path fill="#ff4b55" d="M13.4 12l3.3 2.9-11.9 6.8c-.4.2-.85.2-1.2 0z"/><path fill="#ffc400" d="m16.7 9.1 3.6 2.05c.75.43.75 1.27 0 1.7l-3.6 2.05-3.3-2.9z"/></svg>
+          <span><small>Android</small>Google Playで入手</span>
+        </a>
+      </div>
+      <p class="price-note">基本無料（広告あり）／ 広告なしのProは月額300円</p>
+    </div>
+    <div class="hero-phones">
+      <div class="phone"><img src="img/ja-listening.webp" alt="フルカレの音声入力画面。「明日10時 会議」のように話すと予定が登録される" width="600" height="1301"></div>
+      <div class="phone"><img src="img/ja-calendar.webp" alt="フルカレの月表示カレンダー画面" width="600" height="1301"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pains">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">PROBLEMS</span>
+      <h2>カレンダーアプリ、<br>こんな悩みありませんか？</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain"><p class="q">予定を入れるのが面倒で、つい後回し</p><p class="a">→ <strong>話すだけで登録</strong>。日付や時間を選ぶ操作がいりません。</p></div>
+      <div class="pain"><p class="q">家族の予定をLINEで聞き直している</p><p class="a">→ <strong>共有カレンダー</strong>で、追加されたら通知でわかります。</p></div>
+      <div class="pain"><p class="q">家計簿アプリが3日坊主で続かない</p><p class="a">→ いつも開くカレンダーに<strong>家計簿が付いている</strong>から続きます。</p></div>
+      <div class="pain"><p class="q">次の生理がいつ来るか、毎回数えている</p><p class="a">→ 記録するだけで<strong>次回の予定日をカレンダーに表示</strong>。</p></div>
+      <div class="pain"><p class="q">子どもの写真がトークに流れて見つからない</p><p class="a">→ <strong>日付ごとに写真・日記・成長記録</strong>が残ります。</p></div>
+      <div class="pain"><p class="q">予定・家計簿・生理…アプリが多すぎる</p><p class="a">→ <strong>フルカレ一つ</strong>にまとめられます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FEATURES</span>
+      <h2>悩みごとに、ぜんぶ解決。</h2>
+      <p>フルカレは「予定入力の手間」を減らすところから始まったカレンダーアプリです。毎日の記録を1か所にまとめるための機能がそろっています。</p>
+    </div>
+
+    <div class="feature">
+      <div>
+        <span class="pain-tag">予定入力、めんどくさい！</span>
+        <h3><span class="hl">話すだけで、予定が入る。</span></h3>
+        <p>マイクを押して「明日15時から歯医者」と話すだけ。日付・時間・タイトルを聞き取って、カレンダーに登録します。日付を選んで、時間を選んで、文字を打って……という手間がなくなります。</p>
+        <div class="say-list">
+          <div class="say"><b>明日15時から歯医者</b><span>→ 明日 15:00〜 歯医者</span></div>
+          <div class="say"><b>10月10日から12日 旅行</b><span>→ 3日間の終日予定</span></div>
+          <div class="say"><b>牛乳を買うをタスクに追加</b><span>→ タスクに登録</span></div>
+          <div class="say"><b>明日の会議 消して</b><span>→ 予定を削除（元に戻せます）</span></div>
+        </div>
+        <a class="more-link" href="voice-input-calendar.html">音声入力カレンダーについて詳しく</a>
+      </div>
+      <div class="feature-media"><div class="phone"><img src="img/ja-listening.webp" alt="音声入力の画面。話し方の例が並んでいる" loading="lazy" width="600" height="1301"></div></div>
+    </div>
+
+    <div class="feature rev">
+      <div>
+        <span class="pain-tag">予定も写真も、みんなで共有したい！</span>
+        <h3><span class="hl">家族・夫婦の予定が、ひと目でわかる。</span></h3>
+        <p>共有カレンダーを作って招待コードを送るだけ。家族やパートナー、友達と予定を共有できます。誰かが予定を追加すると、メンバーにプッシュ通知でお知らせします。</p>
+        <ul class="checks">
+          <li>日付ごとに写真を共有。トークに埋もれる思い出が1か所に残る</li>
+          <li>「ひとこと思い出」で、その日の感想をメンバー全員分並べて残せる</li>
+          <li>自分のカレンダーと共有カレンダーは、左上のボタンで切り替え</li>
+          <li>iPhoneとAndroidの間でも共有できる</li>
+        </ul>
+        <a class="more-link" href="shared-calendar.html">共有カレンダーについて詳しく</a>
+      </div>
+      <div class="feature-media"><div class="phone"><img src="img/ja-share.webp" alt="共有カレンダーの画面。予定・ひとこと思い出・共有写真が並ぶ" loading="lazy" width="600" height="1301"></div></div>
+    </div>
+
+    <div class="feature">
+      <div>
+        <span class="pain-tag">家計簿、続かない…</span>
+        <h3><span class="hl">家計簿も、楽々登録。</span></h3>
+        <p>家計簿アプリが続かない一番の理由は「開かなくなること」。フルカレは毎日開くカレンダーの中に家計簿があるので、予定を見るついでに記録できます。「外食 800円 ランチ」と話すだけでも登録できます。</p>
+        <ul class="checks">
+          <li>今月の収支、前月比、カテゴリ別ランキング、日別・月別の推移</li>
+          <li>サブスクなどの定期支払いは、支払日に自動で家計簿へ</li>
+          <li>家計簿は自分専用。共有カレンダーのメンバーには見えません</li>
+        </ul>
+        <a class="more-link" href="calendar-kakeibo.html">家計簿付きカレンダーについて詳しく</a>
+      </div>
+      <div class="feature-media">
+        <div>
+          <div class="mock-budget" role="img" aria-label="家計簿の画面イメージ">
+            <div class="ttl">家計簿　2026年11月</div>
+            <div class="row3"><div><small>収入</small><b class="pos">¥250,000</b></div><div><small>支出</small><b class="neg">¥182,400</b></div><div><small>収支</small><b>¥67,600</b></div></div>
+            <div class="ent"><span><span class="cat" style="background:#fff1e0;color:#e07a10">外</span>ランチ</span><span class="neg">-¥800</span></div>
+            <div class="ent"><span><span class="cat" style="background:#e6f6ff;color:#1580c0">交</span>電車</span><span class="neg">-¥420</span></div>
+            <div class="ent"><span><span class="cat" style="background:#f2ecff;color:#7a4fe0">定</span>動画サブスク</span><span class="neg">-¥990</span></div>
+            <div class="ent"><span><span class="cat" style="background:#e5f8ee;color:#1aa36f">給</span>給与</span><span class="pos">+¥250,000</span></div>
+            <div class="voice">🎙「外食 800円 ランチ」→ 外食に登録</div>
+          </div>
+          <p class="mock-note">※画面はイメージです</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature rev">
+      <div>
+        <span class="pain-tag">次の生理、いつだっけ？</span>
+        <h3><span class="hl">生理の記録と予測も、カレンダーで。</span></h3>
+        <p>生理日を記録するだけで、次回の予定日を予測してカレンダーに表示します。PMS期間の目安もわかるので、予定を立てるときに体調の見通しが立てやすくなります。予定と同じ画面で見られるのがポイントです。</p>
+        <p style="font-size:.85rem;color:var(--muted)">※予測はあくまで目安です。医療上の判断には使わないでください。</p>
+        <a class="more-link" href="period-calendar.html">生理予測カレンダーについて詳しく</a>
+      </div>
+      <div class="feature-media"><div class="phone"><img src="img/ja-period.webp" alt="生理サイクルの画面。PMS期間と次回予定日がカレンダーに表示される" loading="lazy" width="600" height="1301"></div></div>
+    </div>
+
+    <div class="feature">
+      <div>
+        <span class="pain-tag">子どもの思い出、流れていく…</span>
+        <h3><span class="hl">子どもの大切な思い出も記録。</span></h3>
+        <p>ミルク・おむつ・睡眠・体重・体温を記録し、次のミルクの時間を通知でお知らせします。「成長日記」では、できるようになったことを写真と一緒に残せて、生後○か月・○日も自動で表示されます。</p>
+        <a class="more-link" href="baby-calendar.html">育児記録・成長日記について詳しく</a>
+      </div>
+      <div class="feature-media"><div class="phone"><img src="img/ja-growth.webp" alt="成長日記の画面。生後日数と写真付きの記録が並ぶ" loading="lazy" width="600" height="1301"></div></div>
+    </div>
+
+    <div class="feature rev">
+      <div>
+        <span class="pain-tag">予定の変更、いちいち探すのが面倒</span>
+        <h3><span class="hl">AI秘書に、まかせる。</span></h3>
+        <p>チャットで頼むだけで、予定・タスク・家計簿の追加・変更・削除をAIが代わりにやります。どの予定かを探して開いて直す、という操作がいりません。</p>
+        <div class="say-list">
+          <div class="say"><b>歯医者の予定を16時に変更して</b><span>→ 該当の予定を変更</span></div>
+          <div class="say"><b>家族カレンダーに明日19時に外食</b><span>→ 共有カレンダーに追加</span></div>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin-top:12px">※当てはまるものが複数あるときは一覧から選べます。削除の前には必ず確認が入ります。AI秘書は予定・タスク・家計簿の操作専用です。</p>
+      </div>
+      <div class="feature-media"><div class="phone"><img src="img/ja-ai.webp" alt="AI秘書の画面。「明日19時に飲み会」と送ると予定が追加される" loading="lazy" width="600" height="1301"></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">ALL IN ONE</span>
+      <h2>毎日の記録が、これ一つ。</h2>
+      <p>予定はこのアプリ、家計簿はあのアプリ、生理はまた別のアプリ……。フルカレなら、ぜんぶカレンダーの上にまとまります。</p>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="ico">✅</div><h4>タスク・メモ</h4><p>やることリストと、ちょっとしたメモ。音声でも追加できます。</p></div>
+      <div class="tile"><div class="ico">📔</div><h4>日記</h4><p>カレンダーの日付に、そのまま日記と写真を残せます。記録した日は虹色のマスに。</p></div>
+      <div class="tile"><div class="ico">📱</div><h4>ウィジェット</h4><p>今日・明日の予定や月カレンダーを、ホーム画面で確認。iPhoneはロック画面にも。</p></div>
+      <div class="tile"><div class="ico">🔁</div><h4>繰り返し・通知</h4><p>毎週・毎月の予定や、予定前の通知に対応。祝日も表示します。</p></div>
+      <div class="tile"><div class="ico">🏷️</div><h4>スタンプ・色分け</h4><p>予定にスタンプや色を付けて、ひと目でわかるカレンダーに。</p></div>
+      <div class="tile"><div class="ico">⚖️</div><h4>ダイエット</h4><p>体重・BMIを記録して、月別のグラフで推移を確認。</p></div>
+      <div class="tile"><div class="ico">🎨</div><h4>着せ替え</h4><p>テーマ色を選んで、自分好みの見た目に。</p></div>
+      <div class="tile"><div class="ico">🌏</div><h4>日本語・英語</h4><p>英語表示にも対応。英語の音声入力もできます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">PRICE</span>
+      <h2>基本無料で、ずっと使える。</h2>
+      <p>主な機能は無料プランですべて使えます。</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>無料プラン</h3>
+        <div class="price">¥0</div>
+        <ul>
+          <li>音声入力・共有カレンダー・家計簿・生理予測・育児記録・日記・ウィジェット</li>
+          <li>共有カレンダー10個まで</li>
+          <li>写真は1日10枚（動画視聴で20枚）</li>
+          <li>AI秘書は20回までお試し</li>
+          <li>広告あり</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h3>Pro</h3>
+        <div class="price">¥300<small> / 月</small></div>
+        <ul>
+          <li>広告なし（カレンダーが広くなる）</li>
+          <li>音声入力をAIで解析して精度アップ</li>
+          <li>AI秘書が使い放題</li>
+          <li>写真1日100枚・共有カレンダー20個</li>
+          <li>日記のテキスト無制限</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Proは自動更新のサブスクリプションです。解約はストアのアカウント設定からいつでもできます。価格は日本のストアでの税込価格です。</p>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">GUIDE</span>
+      <h2>目的別に、くわしく見る</h2>
+    </div>
+    <ul class="related">
+      <li><a href="calendar-app-guide.html">📚 カレンダーアプリの選び方（目的別おすすめ）</a></li>
+      <li><a href="voice-input-calendar.html">🎙 音声入力で予定を登録できるカレンダー</a></li>
+      <li><a href="shared-calendar.html">👨‍👩‍👧 家族・夫婦で使える共有カレンダー</a></li>
+      <li><a href="calendar-kakeibo.html">💰 家計簿付きカレンダーアプリ</a></li>
+      <li><a href="period-calendar.html">🩸 生理日の予測が見えるカレンダー</a></li>
+      <li><a href="baby-calendar.html">👶 育児記録・成長日記ができるカレンダー</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくある質問</h2>
+    </div>
+    <details><summary>フルカレは無料で使えますか？</summary><p>はい。音声入力、共有カレンダー、家計簿、生理の記録と予測、育児記録、日記、ウィジェットなど主な機能は無料で使えます（広告あり）。月額300円のProにすると広告が消え、AI秘書が使い放題になります。</p></details>
+    <details><summary>音声入力ではどんな言い方ができますか？</summary><p>「明日15時から歯医者」「来週月曜 会議」「10月10日から12日 旅行」など、ふだんの言い方で話せます。時間を言わなければ終日の予定になります。「〜をタスクに追加」「〜をメモして」と言えば、タスクやメモとして登録されます。1回の発話で登録されるのは、予定・タスク・メモのどれか1つです。</p></details>
+    <details><summary>家族や夫婦でカレンダーを共有できますか？</summary><p>できます。共有カレンダーを作って招待コードを送るだけで、家族やパートナーと予定を共有できます。予定が追加されるとメンバーに通知が届き、日付ごとに写真も共有できます。</p></details>
+    <details><summary>家計簿は家族に見られますか？</summary><p>見られません。家計簿は自分専用で、共有カレンダーのメンバーには表示されません。</p></details>
+    <details><summary>生理日の予測は正確ですか？</summary><p>記録した生理日から次回の予定日とPMS期間の目安を表示します。あくまで目安なので、医療上の判断には使わないでください。</p></details>
+    <details><summary>iPhoneとAndroidのどちらでも使えますか？</summary><p>どちらにも対応しています。共有カレンダーはiPhoneとAndroidの間でも使えます。</p></details>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>予定入力は、もう話すだけ。</h2>
+    <p>無料ではじめられます。</p>
+    <div class="stores">
+      <a class="store-btn" href="https://apps.apple.com/jp/app/id6760893351" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3-.79-1.55.02-2.97.9-3.77 2.28-1.6 2.78-.41 6.9 1.15 9.16.77 1.1 1.68 2.34 2.87 2.3 1.15-.05 1.59-.75 2.98-.75 1.39 0 1.78.75 3 .72 1.24-.02 2.02-1.12 2.78-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.64-.77 1.07-1.84.95-2.91-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.82 1.03.08 2.07-.52 2.71-1.29z"/></svg>
+        <span><small>iPhone</small>App Storeで入手</span>
+      </a>
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.koki.shabekare" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00c26e" d="M3.6 2.3 13.4 12l-9.8 9.7c-.35-.2-.6-.6-.6-1.1V3.4c0-.5.25-.9.6-1.1z"/><path fill="#2f9bff" d="M3.6 2.3c.35-.2.8-.2 1.2 0l11.9 6.8-3.3 2.9z"/><path fill="#ff4b55" d="M13.4 12l3.3 2.9-11.9 6.8c-.4.2-.85.2-1.2 0z"/><path fill="#ffc400" d="m16.7 9.1 3.6 2.05c.75.43.75 1.27 0 1.7l-3.6 2.05-3.3-2.9z"/></svg>
+        <span><small>Android</small>Google Playで入手</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5>フルカレ</h5>
+        <p style="margin:0">話すだけで予定が入る<br>カレンダーアプリ</p>
+      </div>
+      <div>
+        <h5>機能</h5>
+        <ul>
+          <li><a href="voice-input-calendar.html">音声入力カレンダー</a></li>
+          <li><a href="shared-calendar.html">共有カレンダー</a></li>
+          <li><a href="calendar-kakeibo.html">家計簿付きカレンダー</a></li>
+          <li><a href="period-calendar.html">生理予測カレンダー</a></li>
+          <li><a href="baby-calendar.html">育児記録・成長日記</a></li>
+          <li><a href="calendar-app-guide.html">カレンダーアプリの選び方</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サポート</h5>
+        <ul>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScaxRCHm7md-bDhODfngOzFkWBwTSequt_0IRT_gFWCEmr4aQ/viewform?usp=publish-editor">お問い合わせ・不具合報告</a></li>
+          <li><a href="mailto:hangxitengben@gmail.com">メールで問い合わせ</a></li>
+          <li><a href="https://x.com/shabekare">X（@shabekare）</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>規約</h5>
+        <ul>
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="account-deletion.html">アカウント削除</a></li>
+          <li><a href="en/">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 フルカレ</p>
+  </div>
+</footer>
+
 </body>
 </html>
